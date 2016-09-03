@@ -16,7 +16,6 @@
  */
 package org.zouzias.spark.lucenerdd.spatial.shape
 
-import com.spatial4j.core.shape.Shape
 import com.twitter.algebird.TopK
 import org.apache.lucene.document.Document
 import org.apache.lucene.spatial.query.SpatialOperation
@@ -24,6 +23,7 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.storage.StorageLevel
 import org.apache.spark._
 import org.apache.spark.sql.{DataFrame, Row}
+import org.locationtech.spatial4j.shape.Shape
 import org.zouzias.spark.lucenerdd.aggregate.SparkScoreDocAggregatable
 import org.zouzias.spark.lucenerdd.models.SparkScoreDoc
 import org.zouzias.spark.lucenerdd.query.LuceneQueryHelpers
