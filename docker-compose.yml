@@ -1,0 +1,14 @@
+zeppelin:
+#  image: dylanmei/zeppelin
+  image: dylanmei/zeppelin:0.6.0-stable
+  environment:
+    ZEPPELIN_PORT: 8080
+    SPARK_SUBMIT_OPTIONS: "--packages org.zouzias:spark-lucenerdd_2.10:0.0.24"
+    ZEPPELIN_JAVA_OPTS: >-
+      -Dspark.driver.memory=1g
+      -Dspark.executor.memory=1g
+    MASTER: local[*]
+  ports:
+    - 8080:8080
+  volumes:
+    - ./data:/zeppelin/data
